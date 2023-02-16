@@ -18,6 +18,10 @@ jobs:
           node-version: 19.x
           cache: 'yarn'
 
+      - run: yarn set version canary
+
+      - run: yarn install --immutable
+
       - name: Build site 
         run: yarn build
 
